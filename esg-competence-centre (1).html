@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESG Competence Centre | Kazakh-British Technical University</title>
+<meta name="description" content="KBTU ESG Competence Centre: your partner in sustainable development, GRI-certified training, consulting, and ESG transformation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#003876;--navy-light:#1a5ba0;--navy-dark:#002a5c;
+  --gold:#d4a843;--gold-light:#e6c76e;
+  --green:#3d9970;--green-light:#e8f5ef;
+  --bg:#f5f7fa;--card:#fff;--text:#0f1f33;--text-muted:#6b7a8d;
+  --border:#dfe5ed;--secondary:#eef1f6;
+}
+body{font-family:'Source Sans 3',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.container{max-width:1200px;margin:0 auto;padding:0 1rem}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+.header{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;max-width:1200px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:.75rem}
+.logo-box{width:40px;height:40px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:.875rem}
+.logo-text{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);line-height:1.3}
+.nav{display:flex;gap:4px}
+.nav a{padding:.5rem 1rem;border-radius:6px;font-size:.875rem;font-weight:500;transition:background .2s,color .2s}
+.nav a:hover{background:var(--secondary)}
+.nav a.active{background:var(--navy);color:#fff}
+.header-right{display:flex;align-items:center;gap:.5rem}
+.search-box{display:flex;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.search-box input{padding:.375rem .75rem;font-size:.875rem;border:none;outline:none;width:160px;background:transparent}
+.search-box button{padding:.375rem .75rem;background:var(--navy);color:#fff;border:none;cursor:pointer}
+.lang{display:flex;gap:2px;font-size:.75rem;font-weight:500}
+.lang span{padding:.25rem .5rem;border-radius:4px;background:var(--secondary);cursor:pointer;transition:background .2s,color .2s}
+.lang span:hover,.lang span.active{background:var(--navy);color:#fff}
+.menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+
+/* Breadcrumb */
+.breadcrumb{background:var(--secondary);border-bottom:1px solid var(--border);padding:.625rem 0;font-size:.875rem;color:var(--text-muted)}
+.breadcrumb span.current{color:var(--text);font-weight:500}
+
+/* Hero */
+.hero{position:relative;min-height:380px;height:55vh;overflow:hidden;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#2d6db5 100%);opacity:.85}
+.hero-content{position:relative;z-index:1;max-width:640px;animation:fadeInLeft .8s ease-out}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(212,168,67,.2);color:#fff;padding:.375rem 1rem;border-radius:9999px;font-size:.875rem;font-weight:500;margin-bottom:1rem;border:1px solid rgba(212,168,67,.3);backdrop-filter:blur(8px)}
+.hero h1{font-size:clamp(2rem,4.5vw,3rem);font-weight:700;color:#fff;margin-bottom:1rem;line-height:1.15}
+.hero p{font-size:1.125rem;color:rgba(255,255,255,.9);max-width:540px;line-height:1.7}
+
+/* Section */
+.section{padding:5rem 0}
+.section-title{text-align:center;margin-bottom:3.5rem}
+.section-title h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;margin-bottom:.75rem}
+.section-title p{color:var(--text-muted);max-width:640px;margin:0 auto}
+
+/* Expertise Cards */
+.expertise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1024px;margin:0 auto}
+.expertise-card{background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border:1px solid rgba(0,0,0,.04);border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .3s;cursor:default}
+.expertise-card:hover{transform:translateY(-6px)}
+.expertise-icon{width:56px;height:56px;border-radius:12px;background:rgba(0,56,118,.1);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;color:var(--navy);transition:background .3s,color .3s}
+.expertise-card:hover .expertise-icon{background:var(--navy);color:#fff}
+.expertise-card h3{font-size:1.25rem;font-weight:700;margin-bottom:.75rem}
+.expertise-card p{font-size:.875rem;color:var(--text-muted);line-height:1.7;margin-bottom:.75rem}
+.highlight-badge{display:inline-flex;align-items:center;gap:.375rem;font-size:.75rem;font-weight:600;color:var(--green);background:var(--green-light);padding:.375rem .75rem;border-radius:9999px}
+
+/* GRI Banner */
+.gri-section{background:var(--secondary);padding:4rem 0}
+.gri-card{max-width:800px;margin:0 auto;background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border:1px solid rgba(0,0,0,.04);border-radius:16px;padding:2.5rem;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.gri-icon{width:64px;height:64px;border-radius:50%;background:rgba(0,56,118,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:2rem}
+.gri-card h3{font-size:1.5rem;font-weight:700;margin-bottom:.75rem}
+.gri-card p{color:var(--text-muted);max-width:600px;margin:0 auto 1rem;line-height:1.7}
+.gri-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.gri-tags span{padding:.5rem 1rem;background:rgba(0,56,118,.1);color:var(--navy);border-radius:9999px;font-size:.875rem;font-weight:500}
+
+/* Why Us */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:800px;margin:0 auto}
+.why-card{display:flex;align-items:flex-start;gap:1rem;padding:1.5rem;border-radius:12px;background:var(--secondary)}
+.why-icon{width:48px;height:48px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.25rem}
+.why-card p{font-weight:500;line-height:1.6}
+
+/* Contact CTA */
+.contact-cta{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#2d6db5 100%);padding:5rem 0}
+.contact-inner{max-width:640px;margin:0 auto;text-align:center}
+.contact-cta h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;color:#fff;margin-bottom:1rem}
+.contact-cta>div>p{color:rgba(255,255,255,.8);margin-bottom:2.5rem}
+.form-card{background:rgba(255,255,255,.1);backdrop-filter:blur(16px);border-radius:16px;padding:2rem;border:1px solid rgba(255,255,255,.2)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-card input,.form-card select{width:100%;padding:.75rem 1rem;border-radius:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font:inherit;font-size:.875rem;outline:none;transition:border-color .2s}
+.form-card input::placeholder{color:rgba(255,255,255,.5)}
+.form-card select{color:rgba(255,255,255,.8)}
+.form-card select option{color:var(--text)}
+.form-card input:focus,.form-card select:focus{border-color:var(--gold)}
+.submit-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--gold);color:var(--navy-dark);padding:.75rem;border-radius:10px;font-weight:600;font-size:1rem;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(212,168,67,.4);transition:background .2s}
+.submit-btn:hover{background:var(--gold-light)}
+
+/* Footer */
+.footer{background:linear-gradient(135deg,var(--navy),#1a4a7a);color:#fff;padding:3rem 0}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.footer h4{font-weight:600;margin-bottom:.75rem;font-family:'Playfair Display',serif}
+.footer ul{list-style:none}
+.footer li{font-size:.875rem;color:rgba(255,255,255,.7);padding:.25rem 0;cursor:pointer;transition:color .2s}
+.footer li:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:2rem;padding-top:1.5rem;text-align:center;font-size:.875rem;color:rgba(255,255,255,.5)}
+.footer-contact{font-size:.875rem;color:rgba(255,255,255,.8);display:flex;flex-direction:column;gap:.5rem}
+
+/* Animations */
+@keyframes fadeInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+.anim-up{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.anim-up.visible{opacity:1;transform:translateY(0)}
+
+/* Responsive */
+@media(max-width:768px){
+  .expertise-grid,.form-row,.why-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .nav,.search-box,.lang,.logo-text{display:none}
+  .menu-btn{display:block}
+}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-box">KB</div>
+      <div class="logo-text"><div>Kazakh-British</div><div>Technical University</div></div>
+    </a>
+    <nav class="nav">
+      <a href="esg-principles.html">ESG Principles</a>
+      <a href="esg-competence-centre.html" class="active">Competence Centre</a>
+    </nav>
+    <div class="header-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      </div>
+      <div class="lang">
+        <span>KZ</span><span>RU</span><span class="active">EN</span>
+      </div>
+      <button class="menu-btn" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-nav" style="display:none;padding:.75rem 1rem;border-top:1px solid var(--border)">
+    <a href="esg-principles.html" style="display:block;padding:.5rem .75rem;font-size:.875rem;font-weight:500">ESG Principles</a>
+    <a href="esg-competence-centre.html" style="display:block;padding:.5rem .75rem;font-size:.875rem;font-weight:500">Competence Centre</a>
+  </nav>
+</header>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="container">
+    <span>Home</span> <span style="margin:0 .5rem">/</span>
+    <span>About the University</span> <span style="margin:0 .5rem">/</span>
+    <span class="current">ESG Competence Centre</span>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">🏆 GRI Certified Partner</div>
+    <h1>KBTU ESG Competence Centre</h1>
+    <p>Your partner in sustainable development and ESG transformation. Science, business, and education united.</p>
+  </div>
+</section>
+
+<!-- Expertise Areas -->
+<section class="section">
+  <div class="container">
+    <div class="section-title anim-up">
+      <h2>Our Areas of Expertise</h2>
+      <p>A full range of solutions from training and workshops to expert consulting and ESG strategy development.</p>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card anim-up">
+        <div class="expertise-icon">📚</div>
+        <h3>Courses &amp; Training</h3>
+        <p>Programs for industrial, financial sectors, universities, and SMEs on international ESG standards and responsible business practices.</p>
+        <div class="highlight-badge">✅ GRI Certified Training Partner in Asia-Pacific</div>
+      </div>
+      <div class="expertise-card anim-up" style="transition-delay:.1s">
+        <div class="expertise-icon">📊</div>
+        <h3>ESG Consulting</h3>
+        <p>Current ESG level diagnosis, ESG reporting preparation, support for ESG ratings, and sustainable development strategy.</p>
+      </div>
+      <div class="expertise-card anim-up" style="transition-delay:.2s">
+        <div class="expertise-icon">⚙️</div>
+        <h3>ESG Transformation</h3>
+        <p>Phased integration of ESG principles into corporate processes: from audit and roadmap to practical project implementation.</p>
+      </div>
+      <div class="expertise-card anim-up" style="transition-delay:.3s">
+        <div class="expertise-icon">🎤</div>
+        <h3>Workshops &amp; Master Classes</h3>
+        <p>ESG in finance, green technologies, carbon footprint management, sustainable supply chains, campus as an ESG ecosystem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRI Banner -->
+<section class="gri-section">
+  <div class="container">
+    <div class="gri-card anim-up">
+      <div class="gri-icon">🏅</div>
+      <h3>GRI Certified Sustainability Professional</h3>
+      <p>KBTU is the official certified training partner of the <strong>Global Reporting Initiative (GRI)</strong> in the Asia-Pacific region. Our certified course "Reporting with the GRI Standards" offers a unique opportunity for specialists in Kazakhstan and CIS to receive international-standard training in Russian and English.</p>
+      <div class="gri-tags">
+        <span>Russian &amp; English</span>
+        <span>Asia-Pacific Region</span>
+        <span>International Certification</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section class="section">
+  <div class="container">
+    <div class="section-title anim-up"><h2>Why Choose Us?</h2></div>
+    <div class="why-grid">
+      <div class="why-card anim-up">
+        <div class="why-icon">🏆</div>
+        <p>First university in Central Asia certified as a GRI training partner</p>
+      </div>
+      <div class="why-card anim-up" style="transition-delay:.1s">
+        <div class="why-icon">👥</div>
+        <p>Expert team combining practitioners and researchers in industry, energy, and finance</p>
+      </div>
+      <div class="why-card anim-up" style="transition-delay:.2s">
+        <div class="why-icon">🖥️</div>
+        <p>Flexible learning formats — online, offline, and corporate programs</p>
+      </div>
+      <div class="why-card anim-up" style="transition-delay:.3s">
+        <div class="why-icon">🔧</div>
+        <p>Practical cases, real tools, and immediately applicable results</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section class="contact-cta">
+  <div class="container">
+    <div class="contact-inner">
+      <h2>Take a Step Toward a Sustainable Future</h2>
+      <p>Fill out the form to receive updates on new courses, workshops, and collaboration opportunities.</p>
+      <div class="form-card anim-up">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Email Address">
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Organization">
+          <select>
+            <option value="">Area of Interest</option>
+            <option>Courses & Training</option>
+            <option>ESG Consulting</option>
+            <option>ESG Transformation</option>
+            <option>Workshops</option>
+          </select>
+        </div>
+        <button class="submit-btn">✉️ Join Our Community</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:1rem">
+          <div class="logo-box" style="background:rgba(255,255,255,.2)">KB</div>
+          <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;line-height:1.3"><div>Kazakh-British</div><div>Technical University</div></div>
+        </div>
+        <div class="footer-contact">
+          <span>📞 8 727 357 42 42</span>
+          <span>✉️ kense@kbtu.kz</span>
+          <span>📍 Almaty, Tole bi street, 59</span>
+        </div>
+      </div>
+      <div><h4>Education</h4><ul><li>Undergraduate</li><li>Graduate</li><li>Postgraduate</li></ul></div>
+      <div><h4>Admission</h4><ul><li>+7 (727) 357 42 51</li><li>admission@kbtu.kz</li></ul></div>
+      <div><h4>Useful Links</h4><ul><li>Vacancy</li><li>Procurement</li></ul></div>
+    </div>
+    <div class="footer-bottom">© <script>document.write(new Date().getFullYear())</script> Kazakh-British Technical University. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.anim-up').forEach(el => observer.observe(el));
+
+// Mobile nav
+const style = document.createElement('style');
+style.textContent = '.mobile-nav.open{display:block!important}';
+document.head.appendChild(style);
+</script>
+</body>
+</html>
