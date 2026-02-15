@@ -23,7 +23,7 @@ h1,h2,h3{font-family:'Playfair Display',serif}
 .container{max-width:1200px;margin:0 auto;padding:0 1rem}
 a{text-decoration:none;color:inherit}
 
-/* Header */
+
 .header{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;max-width:1200px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:.75rem}
@@ -42,11 +42,11 @@ a{text-decoration:none;color:inherit}
 .lang span:hover,.lang span.active{background:var(--navy);color:#fff}
 .menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
 
-/* Breadcrumb */
+
 .breadcrumb{background:var(--secondary);border-bottom:1px solid var(--border);padding:.625rem 0;font-size:.875rem;color:var(--text-muted)}
 .breadcrumb span.current{color:var(--text);font-weight:500}
 
-/* Hero */
+
 .hero{position:relative;min-height:420px;height:60vh;overflow:hidden;display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#2d6db5 100%)}
 .hero-content{position:relative;z-index:1;max-width:640px;animation:fadeInLeft .8s ease-out}
@@ -54,20 +54,20 @@ a{text-decoration:none;color:inherit}
 .hero h1{font-size:clamp(2rem,5vw,3.75rem);font-weight:700;color:#fff;margin-bottom:1rem;line-height:1.15}
 .hero p{font-size:1.125rem;color:rgba(255,255,255,.9);max-width:540px;line-height:1.7}
 
-/* Stats */
+
 .stats{background:var(--card);border-bottom:1px solid var(--border);padding:3rem 0}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
 .stat{text-align:center}
 .stat-number{font-size:2.5rem;font-weight:700;color:var(--navy);font-family:'Playfair Display',serif}
 .stat-label{font-size:.875rem;color:var(--text-muted);margin-top:.25rem}
 
-/* Section */
+
 .section{padding:5rem 0}
 .section-title{text-align:center;margin-bottom:3.5rem}
 .section-title h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;margin-bottom:.75rem}
 .section-title p{color:var(--text-muted);max-width:640px;margin:0 auto}
 
-/* Pillar Cards */
+
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .pillar-card{border-radius:12px;padding:2rem;border:1px solid rgba(0,0,0,.06);box-shadow:0 1px 3px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s;cursor:default}
 .pillar-card:hover{transform:translateY(-8px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
@@ -81,7 +81,7 @@ a{text-decoration:none;color:inherit}
 .pillar-card h3{font-size:1.25rem;font-weight:700;margin-bottom:.75rem}
 .pillar-card p{color:var(--text-muted);font-size:.875rem;line-height:1.7}
 
-/* Policies */
+
 .policies-section{background:var(--secondary)}
 .policies{max-width:768px;margin:0 auto;display:flex;flex-direction:column;gap:.75rem}
 .policy{background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border:1px solid rgba(0,0,0,.04);border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.04);overflow:hidden}
@@ -95,7 +95,7 @@ a{text-decoration:none;color:inherit}
 .policy-body{padding:0 1.5rem 1rem;font-size:.875rem;color:var(--text-muted);border-top:1px solid var(--border);padding-top:.75rem;display:none}
 .policy-body.open{display:block}
 
-/* Commitments */
+
 .commitments-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
 .commit-card{background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border:1px solid rgba(0,0,0,.04);border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .3s;cursor:default}
 .commit-card:hover{transform:translateY(-4px)}
@@ -104,14 +104,14 @@ a{text-decoration:none;color:inherit}
 .commit-card h3{font-weight:600;margin-bottom:.5rem}
 .commit-card p{font-size:.875rem;color:var(--text-muted);line-height:1.6}
 
-/* CTA */
+
 .cta{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-light) 50%,#2d6db5 100%);padding:4rem 0;text-align:center}
 .cta h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;color:#fff;margin-bottom:1rem}
 .cta p{color:rgba(255,255,255,.8);max-width:540px;margin:0 auto 2rem}
 .cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy-dark);padding:.75rem 2rem;border-radius:10px;font-weight:600;font-size:1rem;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(212,168,67,.4);transition:background .2s}
 .cta-btn:hover{background:var(--gold-light)}
 
-/* Footer */
+
 .footer{background:linear-gradient(135deg,var(--navy),#1a4a7a);color:#fff;padding:3rem 0}
 .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
 .footer h4{font-weight:600;margin-bottom:.75rem;font-family:'Playfair Display',serif}
@@ -144,7 +144,7 @@ a{text-decoration:none;color:inherit}
 </head>
 <body>
 
-<!-- Header -->
+<!-- header section -->
 <header class="header">
   <div class="header-inner">
     <a href="/" class="logo">
@@ -181,7 +181,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </div>
 
-<!-- Hero -->
+<!-- Hero section -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="container hero-content">
@@ -194,7 +194,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- Stats -->
+
 <section class="stats">
   <div class="container">
     <div class="stats-grid">
@@ -206,7 +206,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- Three Pillars -->
+
 <section class="section">
   <div class="container">
     <div class="section-title anim-up">
@@ -239,7 +239,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- Policies -->
+
 <section class="section policies-section">
   <div class="container">
     <div class="section-title anim-up">
@@ -250,7 +250,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- Commitments -->
+
 <section class="section">
   <div class="container">
     <div class="section-title anim-up">
@@ -261,7 +261,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- CTA -->
+
 <section class="cta">
   <div class="container">
     <h2>Explore the ESG Competence Centre</h2>
@@ -270,7 +270,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- Footer -->
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -326,7 +326,7 @@ function togglePolicy(btn) {
   if (!isOpen) { body.classList.add('open'); chev.classList.add('open'); }
 }
 
-// Commitments
+// Commitments section
 const commitments = [
   {icon:'📈',title:'ESG as Strategic Vector',desc:"KBTU sees ESG as an integral part of its development strategy."},
   {icon:'🎓',title:'Integration in Education & Research',desc:"Embedding ESG principles in academic programs and encouraging sustainability research."},
